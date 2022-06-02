@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     const loadAppoinments = async () => {
-      await fetch("http://localhost:5000/appoinments")
+      await fetch("https://fierce-sands-37279.herokuapp.com/appoinments")
         .then((res) => res.json())
         .then((data) => setAllEvents(data));
     };
@@ -46,7 +46,7 @@ function App() {
     };
     e.preventDefault();
     setAllEvents([...allEvents, newEvent]);
-    fetch("http://localhost:5000/appoinments", {
+    fetch("https://fierce-sands-37279.herokuapp.com/appoinments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
