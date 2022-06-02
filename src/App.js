@@ -82,7 +82,7 @@ function App() {
                 dateFormat="dd/MM/yy"
                 minDate={moment().toDate()}
                 required
-                placeholderText="Check Out Date"
+                placeholderText="Check In Date"
                 selected={newEvent.start}
                 onChange={(start) => setNewEvent({ ...newEvent, start })}
               />
