@@ -12,27 +12,42 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+.form-container {
+  position: relative;
+  z-index: 1000;
+  margin: 50px 0;
+}
+.form-container input{
+  padding-left: 20px;
+  height: 40px;
+  border: 1px solid #444;
+  border-radius: 20px;
+  width: auto;
+}
+.form-in {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+/* .form-in div {
+  margin: 0 20px;
+} */
+.form-in label{
+  display: inline-block;
+  margin-bottom: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-title {
+  margin-right: 40px;
+}
+.submit-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+.submit-btn input{
+  cursor: pointer;
+ padding: 10px 20px;
 }
