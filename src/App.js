@@ -39,12 +39,16 @@ function App() {
   }, []);
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     const data = {
       title: newEvent.title,
       start: format(newEvent.start, "PP"),
       end: format(newEvent.end, "PP"),
     };
-    e.preventDefault();
+    if (newEvent.start.getTime() > newEvent.end.getTime()) {
+      alert("The first date is after the second date!");
+      return;
+    }
     setAllEvents([...allEvents, newEvent]);
     fetch("https://fierce-sands-37279.herokuapp.com/appoinments", {
       method: "POST",
